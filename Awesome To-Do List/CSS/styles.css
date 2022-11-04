@@ -1,0 +1,100 @@
+@import url(../CSS/reset.css);
+@font-face { 
+    font-family: Gotham;
+    src: url(../Fonts/GothamRoundedLight.ttf);
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(../Fonts/Quicksand-Medium.ttf);
+}
+@font-face {
+    font-family: vazir;
+    src: url(../Fonts/vazir.ttf);
+}
+
+:root{
+    --main-font: vazir;
+
+    --hue-color: 400;  /* Purple: 250; - Green: 142; - Blue: 230; - Pink: 340; */
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --font-color: rgb(0, 0, 0);
+    --bg-color: linear-gradient(135deg, #5D69BE, #C89FEB);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+body{
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    object-fit: cover;
+    font-family: var(--main-font);
+}
+
+::placeholder{
+    color: black;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.textb{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background: transparent;
+    padding: .7rem;
+    font-size: 1rem;
+    color: white;
+}
+
+h3{
+    margin: 10px 0;
+}
+
+.task{
+    width: 100%;
+    background-color: var(--first-color);
+    padding: 1rem;
+    margin: 6px 0;
+    overflow: hidden;
+    border-radius: 5px; 
+}
+
+.completed{
+    padding-top: 1rem;
+}
+
+.completed .task{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.task i{
+    float: right;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.task .done:hover{
+    color: rgb(47, 106, 47);
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+.task .remove:hover{
+    color: red;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
